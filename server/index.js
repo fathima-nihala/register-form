@@ -16,7 +16,7 @@ app.use(cors(
 ));
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://fathimanihala200214:0MDB19PS7ZDGGq2A@cluster0.aqc4dnk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect(process.env.MONGO_URL);
 
 
 app.get("/", (req, res) => {
